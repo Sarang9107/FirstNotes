@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "97150634296",
+    "project_id": "notes-bysarang",
+    "storage_bucket": "notes-bysarang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97150634296:android:4fbf725b1796010142d9cd",
+        "android_client_info": {
+          "package_name": "com.projects.mynotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOUXVcTKEYGMuv05Bn44L_cG-pV5wmGN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
