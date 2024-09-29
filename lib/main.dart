@@ -7,6 +7,8 @@ import 'package:mynotes/view/login_view.dart';
 import 'package:mynotes/view/register_view.dart';
 import 'dart:developer' as devtools show log;
 
+import 'package:mynotes/view/verify_email_view.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
@@ -20,6 +22,7 @@ void main() {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
+        verifyEmailRoute: (context) => const VerifyEmailView(),
       },
     ),
   );
@@ -42,7 +45,7 @@ class HomePage extends StatelessWidget {
               if (user.emailVerified) {
                 return const NotesView();
               } else {
-                return const LoginView();
+                return const VerifyEmailView();
               }
             } else {
               return const LoginView();
