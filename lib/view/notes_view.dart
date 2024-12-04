@@ -14,35 +14,35 @@ class _NotesViewState extends State<NotesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('Main UI'),
-            backgroundColor: Colors.blue,
-            actions: [
-              PopupMenuButton<MenuAction>(
-                onSelected: (value) async {
-                  switch (value) {
-                    case MenuAction.logout:
-                      final shouldlogout = await showLogoutDialog(context);
-                      if (shouldlogout) {
-                        await AuthService.firebase().logOut();
-                        Navigator.of(context).pushNamedAndRemoveUntil(
-                          loginRoute,
-                          (_) => false,
-                        );
-                      }
-                  }
-                },
-                itemBuilder: (context) {
-                  return const [
-                    PopupMenuItem(
-                        value: MenuAction.logout, child: Text('Logout'))
-                  ];
-                },
-              )
-            ]),
-        body: const Center(
-          child: Text("Under Working...... \n jasti ghai asel tr swata kara!"),
-        ),);
+      appBar: AppBar(
+          title: const Text('Main UI'),
+          backgroundColor: Colors.blue,
+          actions: [
+            PopupMenuButton<MenuAction>(
+              onSelected: (value) async {
+                switch (value) {
+                  case MenuAction.logout:
+                    final shouldlogout = await showLogoutDialog(context);
+                    if (shouldlogout) {
+                      await AuthService.firebase().logOut();
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                        loginRoute,
+                        (_) => false,
+                      );
+                    }
+                }
+              },
+              itemBuilder: (context) {
+                return const [
+                  PopupMenuItem(value: MenuAction.logout, child: Text('Logout'))
+                ];
+              },
+            )
+          ]),
+      body: const Center(
+        child: Text("Under Working...... \n Keep Patience !"),
+      ),
+    );
   }
 }
 
